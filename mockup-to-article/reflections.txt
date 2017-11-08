@@ -6,4 +6,8 @@ You've learned a lot about web development so far. I want you to take a moment t
 
 ---
 
-Your response goes here!
+My response below! ;)
+  * I have learned how to use HTML tags and and search for them on the online documentation to make HTML page as much similar as the mockup.
+  * Rendering titles and paragraphs with <h1>, <h2> and <p> tags, or highlight contents with <em> and <strong> tags has been quite easy.
+  * Hints about superscript and horizontal rule in project instructions has made less difficult to add footnote and horizontal line.
+  * First I have used what I learned in the classroom, then I have searched for new stuff on MDN documentation (and Google too!).
