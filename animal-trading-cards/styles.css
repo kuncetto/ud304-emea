@@ -8,10 +8,13 @@ body{
 	border-radius: 3px;	
 }
 
+.shadow {
+	box-shadow: 5px 5px #c7e6f9;	
+}
+
 .card {
 	margin: 5px;
 	padding: 15px;
-	box-shadow: 5px 5px #c7e6f9;
 	width: 300px;
 }
 
@@ -19,6 +22,7 @@ body{
 	font-size: 18px;
 	margin: 10px 0 20px 0;
 	color: #336699;
+	text-align: center;
 }
 
 .information {
@@ -42,6 +46,10 @@ body{
 	list-style-type: none;
 }
 
-li span {
+.item-title {
 	font-weight: bold;
+}
+
+.description::first-letter {
+	font-size: 130%;
 }
