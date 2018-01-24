@@ -1,52 +1,36 @@
 // Select color input
-var color;
-
-color = $('#colorPicker').val();
-
-$('#colorPicker').change(function() {
-  color = $(this).val();
-});
+const colorPicker = $('#colorPicker');
 
 // Select size input
-var height, width;
-
-height = Number($('#input_height').val());
-width = Number($('#input_width').val());
-
-$('#input_height').change(function() {
-  height = Number($(this).val());
-});
-
-$('#input_width').change(function() {
-  width = Number($(this).val());
-});
+const inputHeight = $('#input_height');
+const inputWidth = $('#input_width');
 
 // When size is submitted by the user, call makeGrid()
 $('#sizePicker').submit(function(e) {
   e.preventDefault();
-  makeGrid();
+  let height = inputHeight.val();
+  let width = inputWidth.val();
+  makeGrid(height, width);
 });
 
 $('#pixel_canvas').on('click', 'td', function() {
-  console.log($(this), color);
-  $(this).css('background-color', color);
+  $(this).css('background-color', colorPicker.val());
 });
 
-function makeGrid() {
+function makeGrid(height, width) {
 
   // Your code goes here!
-  var canvas = $('#pixel_canvas');
+  const canvas = $('#pixel_canvas');
 
   // clear pixel canvas
   canvas.empty();
 
-  for (var i = 0; i < height; i++) {
-    var row = $('<tr></tr>');
-    for (var j = 0; j < width; j++) {
-      // add column to row
-      row.append($('<td></td>'));
-    }
-    // add row to table
-    canvas.append(row);
+  for (let i = 0; i < height; i++) {
+    $('<tr></tr>').appendTo(canvas);
   }
+
+  for (let j = 0; j < width; j++) {
+    $('<td></td>').appendTo('tr');
+  }
+
 }
