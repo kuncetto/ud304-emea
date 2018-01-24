@@ -1,5 +1,17 @@
 // Select color input
 // Select size input
+var height, width;
+
+height = Number($('#input_height').val());
+width = Number($('#input_width').val());
+
+$('#input_height').change(function() {
+  height = Number($(this).val());
+});
+
+$('#input_width').change(function() {
+  width = Number($(this).val());
+});
 
 // When size is submitted by the user, call makeGrid()
 $('#sizePicker').submit(function(e) {
@@ -10,8 +22,6 @@ $('#sizePicker').submit(function(e) {
 function makeGrid() {
 
   // Your code goes here!
-  var height = 10;
-  var width = 10;
   var canvas = $('#pixel_canvas');
 
   // clear pixel canvas
