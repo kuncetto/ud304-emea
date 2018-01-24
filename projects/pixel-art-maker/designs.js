@@ -1,4 +1,12 @@
 // Select color input
+var color;
+
+color = $('#colorPicker').val();
+
+$('#colorPicker').change(function() {
+  color = $(this).val();
+});
+
 // Select size input
 var height, width;
 
@@ -17,6 +25,11 @@ $('#input_width').change(function() {
 $('#sizePicker').submit(function(e) {
   e.preventDefault();
   makeGrid();
+});
+
+$('#pixel_canvas').on('click', 'td', function() {
+  console.log($(this), color);
+  $(this).css('background-color', color);
 });
 
 function makeGrid() {
