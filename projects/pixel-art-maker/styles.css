@@ -52,6 +52,10 @@ p {
   font-family: 'Ubuntu', sans-serif;
 }
 
+p {
+  margin-top: 20px;
+}
+
 #colorPicker {
   padding: 0;
   width: 34px;
