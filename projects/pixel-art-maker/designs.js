@@ -38,14 +38,14 @@ $(document).ready(function() {
   });
 
   // Change cursor when mouse enters into a cell
-  pixelCanvas.on('mouseenter', 'td', function() {
+  pixelCanvas.on('mouseenter', function() {
     $(this).awesomeCursor('pencil', {
       hotspot: 'bottom left'
     });
   });
 
   // Reset cursor when mouse leaves a cell
-  pixelCanvas.on('mouseleave', 'td', function() {
+  pixelCanvas.on('mouseleave', function() {
     $(this).css('curson', '');
   });
 
