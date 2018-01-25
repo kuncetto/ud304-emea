@@ -15,8 +15,8 @@ $(document).ready(function() {
   // When size is submitted by the user, call makeGrid()
   sizePicker.submit(function(e) {
     e.preventDefault();
-    let height = inputHeight.val();
-    let width = inputWidth.val();
+    const height = inputHeight.val();
+    const width = inputWidth.val();
     makeGrid(height, width);
   });
 
