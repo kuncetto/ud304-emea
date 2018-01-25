@@ -35,7 +35,19 @@ $(document).ready(function() {
   pixelCanvas.on('contextmenu', 'td', function(e) {
     e.preventDefault();
     $(this).css('background-color', '');
-  })
+  });
+
+  // Change cursor when mouse enters into a cell
+  pixelCanvas.on('mouseenter', 'td', function() {
+    $(this).awesomeCursor('pencil', {
+      hotspot: 'bottom left'
+    });
+  });
+
+  // Reset cursor when mouse leaves a cell
+  pixelCanvas.on('mouseleave', 'td', function() {
+    $(this).css('curson', '');
+  });
 
   function makeGrid(height, width) {
 
