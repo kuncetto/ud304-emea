@@ -16,21 +16,15 @@
     <div class="row">
       <h2>Choose Grid Size</h2>
       <form class="form-inline" id="sizePicker">
-        <div class="form-group">
-          <label for="height">Grid Height:</label>
-          <div class="input-group">
-            <input class="form-control" type="number" id="input_height" name="height" min="1" max="30" value="10">
-            <span class="input-group-addon"><i class="fa fa-arrows-v"></i></span>
-          </div>
+        <div class="input-group input-group-lg">
+          <label class="input-group-addon" for="height">Height</label>
+          <input class="form-control" type="number" id="input_height" name="height" min="1" max="30" value="10">
         </div>
-        <div class="form-group">
-          <label for="width">Grid Width:</label>
-          <div class="input-group">
-            <input class="form-control" type="number" id="input_width" name="width" min="1" max="30" value="10">
-            <span class="input-group-addon"><i class="fa fa-arrows-h"></i></span>
-          </div>
+        <div class="input-group input-group-lg">
+          <label class="input-group-addon" for="width">Width</label>
+          <input class="form-control" type="number" id="input_width" name="width" min="1" max="30" value="10">
         </div>
-        <button class="btn btn-success" type="submit">
+        <button class="btn btn-success btn-lg" type="submit">
           <i class="fa fa-th"></i> Create
         </button>
       </form>
@@ -47,7 +41,6 @@
       <p class="alert alert-info"><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i> Right click on a cell to clear it.</p>
     </div>
   </div>
-
   <script src="designs.js"></script>
 </body>
 </html>
