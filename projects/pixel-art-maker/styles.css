@@ -38,3 +38,8 @@ td {
 input[type=number] {
   width: 6em;
 }
+
+#colorPicker {
+  padding: 0;
+  width: 34px;
+}

@@ -2,28 +2,41 @@
 <html>
 <head>
   <title>Pixel Art Maker!</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
   <link rel="stylesheet" href="styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <h1>Lab: Pixel Art Maker</h1>
-
-  <h2>Choose Grid Size</h2>
-  <form id="sizePicker">
-    Grid Height:
-    <input type="number" id="input_height" name="height" min="1" max="30" value="10">
-    Grid Width:
-    <input type="number" id="input_width" name="width" min="1" max="30" value="10">
-    <button type="submit">Create</button>
-  </form>
-
-  <h2>Pick A Color</h2>
-  <input type="color" id="colorPicker">
-
-  <h2>Design Canvas</h2>
-  <p>Right click on a cell to clear it.</p>
-  <table id="pixel_canvas"></table>
+  <div class="container">
+    <h1>Lab: Pixel Art Maker</h1>
+    <div class="row">
+      <h2>Choose Grid Size</h2>
+      <form class="form-inline" id="sizePicker">
+        <div class="form-group">
+          <label class="control-label" for="height">Grid Height:</label>
+          <input class="form-control" type="number" id="input_height" name="height" min="1" max="30" value="10">
+        </div>
+        <div class="form-group">
+          <label for="width">Grid Width:</label>
+          <input class="form-control" type="number" id="input_width" name="width" min="1" max="30" value="10">
+        </div>
+        <button class="btn btn-success" type="submit">Create</button>
+      </form>
+    </div>
+    <div class="row">
+      <h2>Pick A Color</h2>
+      <div class="form-group" align="center">
+        <input class="form-control" type="color" id="colorPicker">
+      </div>
+    </div>
+    <div class="row">
+      <h2>Design Canvas</h2>
+      <p>Right click on a cell to clear it.</p>
+      <table id="pixel_canvas"></table>
+    </div>
+  </div>
 
   <script src="designs.js"></script>
 </body>
