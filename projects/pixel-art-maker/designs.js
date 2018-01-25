@@ -21,18 +21,19 @@ $(document).ready(function() {
   });
 
   // When user reset the form, call resetGrid()
-  sizePicker.children('[type="reset"]').on('click', function(e) {
-    e.preventDefault();
-    resetGrid();
-  });
+  // sizePicker.children('[type="reset"]').on('click', function(e) {
+  //   e.preventDefault();
+  //   resetGrid();
+  // });
 
   // Click on a cell to color it
   pixelCanvas.on('click', 'td', function() {
     $(this).css('background-color', colorPicker.val());
   });
 
-  // Double click on a cell to clean it
-  pixelCanvas.on('dblclick', 'td', function() {
+  // Right click on a cell to clean it
+  pixelCanvas.on('contextmenu', 'td', function(e) {
+    e.preventDefault();
     $(this).css('background-color', '');
   })
 
