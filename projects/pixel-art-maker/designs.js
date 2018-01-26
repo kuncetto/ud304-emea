@@ -40,7 +40,8 @@ $(document).ready(function() {
   // Change cursor when mouse enters into a cell
   pixelCanvas.on('mouseenter', function() {
     $(this).awesomeCursor('pencil', {
-      hotspot: 'bottom left'
+      hotspot: 'bottom left',
+      size: 24
     });
   });
 
